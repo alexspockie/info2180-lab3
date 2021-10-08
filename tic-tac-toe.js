@@ -4,9 +4,16 @@ function initpage(){
 	for(let c of children){
 		cnt++;
 		c.classList.add("square");
+
 		c.setAttribute("id",cnt);
 		c.addEventListener("click",function(){			
 			makeMove(c,cnt);
+		});
+		c.addEventListener("mouseenter",function(){			
+			c.classList.add("hover");
+		});
+		c.addEventListener("mouseleave",function(){			
+			c.classList.remove("hover");
 		});
 	}
 } 
