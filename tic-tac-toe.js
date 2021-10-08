@@ -24,7 +24,11 @@ function initpage(){
 
 } 
 function makeMove(c){
-	if(moves==0){
+	if (c.classList.contains("X")||c.classList.contains("O")||document.getElementById("status").classList.contains("you-won")){
+		//pass
+	}
+	else{
+		if(moves==0){
 		c.classList.add("X");
 		c.innerHTML="X";
 		var m=1;
@@ -88,6 +92,8 @@ function makeMove(c){
 	else{
 		//pass;
 	}	
+	}
+	
 }
 
 
