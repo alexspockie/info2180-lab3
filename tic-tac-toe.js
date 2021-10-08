@@ -58,6 +58,29 @@ function makeMove(c){
 	if(rownum==colnum){
 		lfdg=lfdg+m;
 	}
+	if(colnum==1 && rownum==1){
+		rtdg=rtdg+m;
+		
+	var diff=rownum-colnum;
+	if (diff==2 || diff==-2){
+		rtdg=rtdg+m;
+		
+	}
+	if (rows[rownum]==3 || columns[colnum]==3 || lfdg==3 || rtdg==3){
+		//x wins
+		wsec=document.getElementById("status");
+		wsec.classList.add("you-won");
+		wsec.innerHTML="Congratulations! X is the Winner!";
+	}
+	else if(rows[rownum]==-3 || columns[colnum]==-3 || lfdg==-3 ||rtdg==-3){
+		//o wins
+		wsec=document.getElementById("status");
+		wsec.classList.add("you-won");
+		wsec.innerHTML="Congratulations! O is the Winner!";
+	}
+	else{
+		//pass;
+	}
 	//add things to calculate right diagonal
 	
 }
